@@ -38,8 +38,6 @@ const ImageDiv = styled.div`
 const ImageFooter = styled.p`
   color: #070606da;
   font-family: "Montserrat" !important;
-  font-weight: bold;
-
   font-size: 30px;
   margin-left: -50px;
   margin-top: 20px;
@@ -80,19 +78,17 @@ const DescripcionContainer = styled.div`
 
 const TituloDescripcion = styled.h4`
   font-family: "Montserrat" !important;
-  font-weight: bold;
   color: orange;
 `;
 const Descripcion = styled.p`
   font-size: 18px;
   font-family: "Montserrat";
   color: black;
-  font-weight: bold;
 `;
 const DescripcionColumn2 = styled.p`
   font-size: 20px;
   font-family: "Montserrat" !important;
-  font-weight: bold;
+
   color: black;
 `;
 const AboutMe = () => {

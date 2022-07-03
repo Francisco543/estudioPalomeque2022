@@ -37,7 +37,7 @@ const ImageDiv = styled.div`
 
 const ImageFooter = styled.p`
   color: #070606da;
-  font-family: "Montserrat";
+  font-family: "Montserrat" !important;
   font-weight: bold;
 
   font-size: 30px;
@@ -79,7 +79,7 @@ const DescripcionContainer = styled.div`
 `;
 
 const TituloDescripcion = styled.h4`
-  font-family: "Montserrat";
+  font-family: "Montserrat" !important;
   font-weight: bold;
   color: orange;
 `;
@@ -91,7 +91,7 @@ const Descripcion = styled.p`
 `;
 const DescripcionColumn2 = styled.p`
   font-size: 20px;
-  font-family: "Montserrat";
+  font-family: "Montserrat" !important;
   font-weight: bold;
   color: black;
 `;

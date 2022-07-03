@@ -1,0 +1,14 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true,
+  "cSpell.words": [
+    "ltree",
+    "resium",
+    "skipd",
+    "Travatar",
+    "Travatars",
+    "zustand"
+  ]
+}

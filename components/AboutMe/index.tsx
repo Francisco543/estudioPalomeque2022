@@ -42,7 +42,7 @@ const ImageDiv = styled.div`
 
 const ImageFooter = styled.p`
   color: #070606da;
-  font-family: "Carrois Gothic SC", sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-size: 20px;
   line-height: 1.875;
@@ -85,14 +85,14 @@ const DescripcionContainer = styled.div`
 `;
 
 const TituloDescripcion = styled.h4`
-  font-family: "Carrois Gothic SC", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 1.5px;
   color: orange;
 `;
 const Descripcion = styled.p`
-  font-family: "Carrois Gothic SC", sans-serif;
+  font-family: "Lora", serif;
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 1.5px;

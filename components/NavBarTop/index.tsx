@@ -25,8 +25,8 @@ const Title = styled.p`
   font-size: 19px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #3a4d55;
-  font-family: "Carrois Gothic SC", sans-serif;
+  color: black;
+  font-family: "Lora", serif;
   margin-left: 20px;
 `;
 const Menu = styled.div`
@@ -35,10 +35,10 @@ const Menu = styled.div`
 `;
 const MenuItem = styled.p`
   font-size: 15px;
-  color: #3a4d55;
+  color: #1d1b1b;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: "Carrois Gothic SC", sans-serif;
+  font-family: "Lora", serif;
   margin-left: 20px;
   margin-right: 50px;
   cursor: pointer;

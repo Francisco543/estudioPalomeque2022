@@ -12,8 +12,9 @@ const Container = styled.div`
 `;
 
 const Title = styled.p`
-  font-family: "Carrois Gothic SC", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
+  font-weight: bold;
   text-transform: uppercase;
   align-self: center;
   color: black;
@@ -37,6 +38,7 @@ const LineEnd = styled.div`
   height: 4px;
   width: 100px;
   align-self: flex-end;
+  justify-self: flex-end;
 `;
 const LineBlueEnd = styled.div`
   background-color: #101055;
@@ -62,11 +64,11 @@ const PracticasCard = styled.div`
   flex-direction: column;
   background-color: #fff;
   width: 400px;
-  height: 400px;
+  height: 450px;
 `;
 
 const TituloPractica = styled.p`
-  font-family: "Carrois Gothic SC", sans-serif;
+  font-family: "Montserrat";
   font-size: 30px;
   text-transform: uppercase;
   align-self: center;
@@ -74,9 +76,10 @@ const TituloPractica = styled.p`
 `;
 
 const TextoPractica = styled.p`
-  font-family: "Carrois Gothic SC", sans-serif;
+  font-family: "Lora", serif;
   font-size: 15px;
-  text-transform: uppercase;
+  line-height: 1.875;
+  letter-spacing: 1.5px;
   align-self: center;
   color: black;
   max-width: 80%;

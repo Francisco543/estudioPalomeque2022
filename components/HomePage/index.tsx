@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import AboutMe from "../AboutMe";
-import Aboutv2 from "../AboutMe/Aboutv2";
+
 import Background from "../common/Background";
 import CarouselComp from "../common/Carousel";
 import NavBarTop from "../NavBarTop";
@@ -21,7 +21,6 @@ const HomePage = () => {
       <NavBarTop />
       <CarouselComp />
       <AboutMe />
-      <Aboutv2 />
     </Container>
   );
 };

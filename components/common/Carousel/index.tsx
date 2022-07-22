@@ -21,7 +21,12 @@ const ImageContainerWithGradient = styled.div<ImageContainerProps>`
 
 const CarouselComp = () => {
   return (
-    <Carousel height={"500px"} indicators={false} autoPlay={true}>
+    <Carousel
+      height={"500px"}
+      indicators={false}
+      autoPlay={true}
+      stopAutoPlayOnHover={false}
+    >
       <ImageContainerWithGradient url="/images/slidebar1.jpg"></ImageContainerWithGradient>
       <ImageContainerWithGradient url="/images/carousel5.png"></ImageContainerWithGradient>
       <ImageContainerWithGradient url="/images/tribunales.jpg"></ImageContainerWithGradient>

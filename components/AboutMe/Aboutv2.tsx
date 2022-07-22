@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Avatar, Typography } from "@mui/material";
+import { Avatar } from "@mui/material";
 
 const AboutContainer = styled.div`
   display: flex;

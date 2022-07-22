@@ -4,6 +4,7 @@ import AboutMe from "../AboutMe";
 import Background from "../common/Background";
 import CarouselComp from "../common/Carousel";
 import NavBarTop from "../NavBarTop";
+import Practices from "../Practices";
 
 const Container = styled.div`
   display: flex;
@@ -21,6 +22,7 @@ const HomePage = () => {
       <NavBarTop />
       <CarouselComp />
       <AboutMe />
+      <Practices />
     </Container>
   );
 };

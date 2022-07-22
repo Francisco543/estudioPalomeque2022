@@ -42,6 +42,10 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
             rel="stylesheet"
           />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />

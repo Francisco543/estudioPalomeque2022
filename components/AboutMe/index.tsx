@@ -25,7 +25,12 @@ const MainContainer = styled.div`
 `;
 
 const ImageDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   @media (max-width: 1441px) {
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,9 +42,12 @@ const ImageDiv = styled.div`
 
 const ImageFooter = styled.p`
   color: #070606da;
-  font-family: "Montserrat" !important;
-  font-size: 30px;
-  margin-left: -50px;
+  font-family: "Carrois Gothic SC", sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 1.875;
+  letter-spacing: 1.5px;
+
   margin-top: 20px;
   @media (max-width: 1441px) {
     margin-top: 0;
@@ -77,12 +85,17 @@ const DescripcionContainer = styled.div`
 `;
 
 const TituloDescripcion = styled.h4`
-  font-family: "Montserrat" !important;
+  font-family: "Carrois Gothic SC", sans-serif;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 1.5px;
   color: orange;
 `;
 const Descripcion = styled.p`
-  font-size: 18px;
-  font-family: "Montserrat";
+  font-family: "Carrois Gothic SC", sans-serif;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 1.5px;
   color: black;
 `;
 const DescripcionColumn2 = styled.p`

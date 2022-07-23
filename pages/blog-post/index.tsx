@@ -97,20 +97,19 @@ const BlogPost = () => {
     const auth = getAuth();
     signOut(auth)
       .then(() => {
-        // Sign-out successful.
-        console.log("succes");
-        console.log(auth);
+        setAlert({ message: "Log Out", severity: 1 });
+        router.push({
+          pathname: `/`,
+        });
       })
       .catch((error) => {
-        // An error happened.
-        console.log("fail");
+        setAlert({ message: "Error", severity: 2 });
       });
   };
 
   const handlePostNewBlog = () => {
     try {
       const data = getValues();
-
       createPost({
         variables: {
           title: data.title,
@@ -119,21 +118,17 @@ const BlogPost = () => {
       }).then((data) => {
         console.log(data);
         const id = data.data.createPost.id;
-        console.log(
-          "🚀 ~ file: index.tsx ~ line 123 ~ handlePostNewBlog ~ id",
-          id
-        );
+
         publishPost({
           variables: {
             id: id,
           },
         });
-        console.log("Blog published");
+        setAlert({ message: "Blog Published", severity: 1 });
       });
-
-      console.log("Creating new blog");
     } catch (error) {
       console.log(error);
+      setAlert({ message: "Error", severity: 2 });
     }
   };
 

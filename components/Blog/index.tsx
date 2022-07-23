@@ -165,7 +165,7 @@ const Blog = () => {
                   <BlogTitle>{blog?.title}</BlogTitle>
                   <BlogText>{truncateString(blog?.blogContent, 200)}</BlogText>
                   <ReadMore onClick={() => handleOpenReadMore(blog)}>
-                    Read More
+                    Ver blog
                   </ReadMore>
                   <CreatedAt>{blog?.createdAt.slice(0, 10)}</CreatedAt>
                 </BlogTextContainer>

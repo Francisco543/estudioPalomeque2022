@@ -117,7 +117,9 @@ const StyledAvatar = styled(Avatar)`
 `;
 
 const Blog = () => {
-  const { loading, error, data } = useQuery(GET_POSTS);
+  const { loading, error, data } = useQuery(GET_POSTS, {
+    fetchPolicy: "no-cache",
+  });
 
   const [blog, setBlog] = useState({});
   const [openBlogModal, setOpenBlogModal] = useState(false);

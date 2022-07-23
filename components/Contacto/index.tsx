@@ -157,7 +157,7 @@ const Contacto = () => {
         </AlertContainer>
       )}
       <form onSubmit={enviarEmail}>
-        <ContactoContainerWrapper>
+        <ContactoContainerWrapper id={"contacto"}>
           <ContactoContainer>
             <ImageContainer>
               <ImageContacto src={"/images/slidebar1.jpg"}></ImageContacto>

@@ -89,7 +89,7 @@ const Blog = () => {
   }, []);
 
   return (
-    <BlogContainer>
+    <BlogContainer id={"blog"}>
       <TitleContainer>
         <Title>Blog</Title>
         <Line data-aos="fade-right" />

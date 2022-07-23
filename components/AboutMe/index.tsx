@@ -107,7 +107,7 @@ const DescripcionColumn2 = styled.p`
 `;
 const AboutMe = () => {
   return (
-    <MainContainer>
+    <MainContainer id="estudio">
       <ImageDiv>
         <Avatar
           style={{ width: 200, height: 200 }}

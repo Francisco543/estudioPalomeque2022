@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Box, Modal } from "@mui/material";
 import { useEffect, useState } from "react";
 import { RiMenuFill } from "react-icons/ri";
+import { Link } from "react-scroll";
 const Container = styled.div`
   width: 100%;
   height: 150px;
@@ -46,7 +47,7 @@ const MenuMobile = styled(Box)`
   }
 `;
 
-const MenuItem = styled.p`
+const MenuItem = styled(Link)`
   font-size: 15px;
   color: #1d1b1b;
   text-transform: uppercase;
@@ -158,14 +159,45 @@ const NavBarTop = () => {
           </Title>
         </ImageContainer>
         <Menu>
-          <MenuItem className={colorChange ? "fontColor" : ""}>
+          <MenuItem
+            to={"estudio"}
+            smooth={true}
+            offset={-200}
+            duration={700}
+            delay={200}
+            className={colorChange ? "fontColor" : ""}
+          >
             Estudio
           </MenuItem>
-          <MenuItem className={colorChange ? "fontColor" : ""}>
+
+          <MenuItem
+            to={"areas"}
+            smooth={true}
+            offset={-200}
+            duration={700}
+            delay={200}
+            className={colorChange ? "fontColor" : ""}
+          >
             Areas de Practica
           </MenuItem>
-          <MenuItem className={colorChange ? "fontColor" : ""}>Blog</MenuItem>
-          <MenuItem className={colorChange ? "fontColor" : ""}>
+          <MenuItem
+            to={"blog"}
+            smooth={true}
+            offset={-200}
+            duration={700}
+            delay={200}
+            className={colorChange ? "fontColor" : ""}
+          >
+            Blog
+          </MenuItem>
+          <MenuItem
+            to={"contacto"}
+            smooth={true}
+            offset={-200}
+            duration={700}
+            delay={200}
+            className={colorChange ? "fontColor" : ""}
+          >
             Contacto
           </MenuItem>
         </Menu>

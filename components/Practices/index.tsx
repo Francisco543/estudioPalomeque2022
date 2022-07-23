@@ -96,7 +96,7 @@ const Practices = (): ReactElement => {
     AOS.init();
   }, []);
   return (
-    <Container>
+    <Container id={"areas"}>
       <TitleContainer>
         <Title>Areas de Practica</Title>
         <Line data-aos="fade-right" />

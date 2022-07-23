@@ -143,15 +143,11 @@ const NavBarTop = () => {
     <>
       <Modal open={openMenuModal} onClose={handelCloseMenuModal}>
         <MenuModalContainer>
-          <MenuItemMobile className={colorChange ? "fontColor" : ""}>
-            Estudio
-          </MenuItemMobile>
-          <MenuItemMobile className={colorChange ? "fontColor" : ""}>
+          <MenuItemMobile className={"fontColor"}>Estudio</MenuItemMobile>
+          <MenuItemMobile className={"fontColor"}>
             Areas de Practica
           </MenuItemMobile>
-          <MenuItemMobile className={colorChange ? "fontColor" : ""}>
-            Contacto
-          </MenuItemMobile>
+          <MenuItemMobile className={"fontColor"}>Contacto</MenuItemMobile>
         </MenuModalContainer>
       </Modal>
 

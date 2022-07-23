@@ -10,6 +10,7 @@ const GET_POSTS = gql`
       id
       tags
       createdAt
+      date
     }
   }
 `;

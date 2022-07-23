@@ -14,10 +14,11 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
 const ContactoContainerWrapper = styled.div`
-  height: 550px;
+  height: 700px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #e4e1dedd;
   @media (max-width: 1000px) {
@@ -103,6 +104,29 @@ const AlertContainer = styled(Box)`
   top: 70px;
 `;
 
+const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 0 8px;
+`;
+
+const Title = styled.p`
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  align-self: center;
+  color: black;
+`;
+
+const Line = styled.div`
+  background-color: #ffb341;
+  height: 4px;
+  width: 100px;
+`;
+
 const Contacto = () => {
   const [alert, setAlert] = useState({ message: "", severity: 0 });
 
@@ -159,6 +183,10 @@ const Contacto = () => {
       )}
       <form onSubmit={enviarEmail}>
         <ContactoContainerWrapper id={"contacto"}>
+          <TitleContainer>
+            <Title>Contacto</Title>
+            <Line data-aos="fade-right" />
+          </TitleContainer>
           <ContactoContainer>
             <ImageContainer>
               <ImageContacto src={"/images/slidebar1.jpg"}></ImageContacto>

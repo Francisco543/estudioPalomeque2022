@@ -79,6 +79,15 @@ const BlogText = styled.p`
   color: black;
 `;
 
+const CreatedAt = styled.p`
+  align-self: flex-end;
+  font-family: "Lora", serif;
+  font-size: 10px;
+  line-height: 1.875;
+  letter-spacing: 1.5px;
+  color: #3a3838;
+`;
+
 const AllBlogsContainer = styled(Box)`
   width: 90%;
   display: flex;
@@ -96,6 +105,7 @@ const StyledAvatar = styled(Avatar)`
 
 const Blog = () => {
   const { loading, error, data } = useQuery(GET_POSTS);
+  console.log("🚀 ~ file: index.tsx ~ line 107 ~ Blog ~ data", data);
 
   useEffect(() => {
     AOS.init();
@@ -121,6 +131,7 @@ const Blog = () => {
               <BlogTextContainer>
                 <BlogTitle>{blog?.title}</BlogTitle>
                 <BlogText>{blog?.content?.text}</BlogText>
+                <CreatedAt>{blog?.date}</CreatedAt>
               </BlogTextContainer>
             </BlogArticleContainer>
           );

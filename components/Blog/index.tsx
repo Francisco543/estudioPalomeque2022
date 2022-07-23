@@ -57,6 +57,7 @@ const BlogTextContainer = styled(Box)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  min-width: 50%;
   justify-content: center;
   @media (max-width: 1000px) {
     max-width: 70%;
@@ -129,8 +130,8 @@ const Blog = () => {
               ></StyledAvatar>
               <BlogTextContainer>
                 <BlogTitle>{blog?.title}</BlogTitle>
-                <BlogText>{blog?.content?.text}</BlogText>
-                <CreatedAt>{blog?.date}</CreatedAt>
+                <BlogText>{blog?.blogContent}</BlogText>
+                <CreatedAt>{blog?.createdAt.slice(0, 10)}</CreatedAt>
               </BlogTextContainer>
             </BlogArticleContainer>
           );

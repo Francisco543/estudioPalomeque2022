@@ -84,11 +84,6 @@ const ImageContacto = styled.img`
   height: 100%;
 `;
 
-const MenuModalContainer = styled.div`
-  width: 100%;
-  height: 100%;
-`;
-
 const Contacto = () => {
   return (
     <ContactoContainerWrapper>

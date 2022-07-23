@@ -77,7 +77,6 @@ const MenuItemMobile = styled.p`
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: "Lora", serif;
-
   cursor: pointer;
 
   &:after {
@@ -104,6 +103,7 @@ const Logo = styled.img`
 const MenuModalContainer = styled.div`
   width: 50%;
   height: 100%;
+  text-align: center;
   background-color: #dab349c0;
   display: flex;
   flex-direction: column;

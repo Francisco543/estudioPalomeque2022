@@ -13,6 +13,7 @@ const Container = styled.div`
   position: sticky;
   top: 0;
   z-index: 1000;
+  transition: all 2s ease-out;
 `;
 const ImageContainer = styled.div`
   margin-left: 20px;
@@ -24,7 +25,7 @@ const ImageContainer = styled.div`
   min-width: 100px;
 `;
 const Title = styled.p`
-  font-size: 19px;
+  font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: black;

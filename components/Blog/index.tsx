@@ -147,7 +147,7 @@ const Blog = () => {
 
       <BlogContainer id={"blog"}>
         <TitleContainer>
-          <Title>Blog</Title>
+          <Title>Noticias</Title>
           <Line data-aos="fade-right" />
         </TitleContainer>
         <AllBlogsContainer>

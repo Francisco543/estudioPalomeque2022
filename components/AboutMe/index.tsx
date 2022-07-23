@@ -8,15 +8,15 @@ const MainContainer = styled.div`
   height: 500px;
   align-items: center;
   justify-content: space-around;
-  @media (max-width: 1441px) {
+  @media (max-width: 1500px) {
     height: 650px;
     justify-content: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  @media (max-width: 710px) {
-    height: 700px;
+  @media (max-width: 800px) {
+    height: 900px;
     justify-content: center;
     flex-direction: column;
     justify-content: center;

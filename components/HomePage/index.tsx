@@ -3,6 +3,8 @@ import AboutMe from "../AboutMe";
 
 import Background from "../common/Background";
 import CarouselComp from "../common/Carousel";
+import Contacto from "../Contacto";
+import Footer from "../Footer";
 import NavBarTop from "../NavBarTop";
 import Practices from "../Practices";
 
@@ -23,6 +25,8 @@ const HomePage = () => {
       <CarouselComp />
       <AboutMe />
       <Practices />
+      <Contacto />
+      <Footer />
     </Container>
   );
 };

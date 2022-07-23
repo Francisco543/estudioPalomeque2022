@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
+import { Box } from "@mui/material";
 import { useEffect, useState } from "react";
-
+import { RiMenuFill } from "react-icons/ri";
 const Container = styled.div`
   width: 100%;
   height: 150px;
@@ -32,7 +33,19 @@ const Title = styled.p`
 const Menu = styled.div`
   display: flex;
   flex-direction: row;
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `;
+
+const MenuMobile = styled(Box)`
+  display: none;
+  margin-right: 25px;
+  @media (max-width: 1000px) {
+    display: block;
+  }
+`;
+
 const MenuItem = styled.p`
   font-size: 15px;
   color: #1d1b1b;
@@ -94,6 +107,9 @@ const NavBarTop = () => {
         </MenuItem>
         <MenuItem className={colorChange ? "fontColor" : ""}>Contacto</MenuItem>
       </Menu>
+      <MenuMobile>
+        <RiMenuFill size={30} />
+      </MenuMobile>
     </Container>
   );
 };

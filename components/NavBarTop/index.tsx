@@ -174,7 +174,7 @@ const NavBarTop = () => {
           </MenuItem>
         </Menu>
         <MenuMobile>
-          <RiMenuFill size={30} onClick={handleOpenMenuModal} />
+          <RiMenuFill color="#ca9737" size={30} onClick={handleOpenMenuModal} />
         </MenuMobile>
       </Container>
     </>

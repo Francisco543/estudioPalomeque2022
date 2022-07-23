@@ -16,4 +16,12 @@ const PUBLISH_POST = gql`
   }
 `;
 
-export { NEW_POST, PUBLISH_POST };
+const DELETE_POST = gql`
+  mutation DeletePost($id: ID!) {
+    deletePost(where: { id: $id }) {
+      id
+    }
+  }
+`;
+
+export { NEW_POST, PUBLISH_POST, DELETE_POST };

@@ -6,8 +6,8 @@ import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
 const LoginContainer = styled.form`
-  width: 100%;
-  height: 100%;
+  width: "fit-content";
+  height: "fit-content";
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -22,9 +22,31 @@ const TitleContainer = styled.div`
   align-items: center;
 `;
 
+const LoginImage = styled.img`
+  width: 50%;
+  height: 200px;
+`;
+
+const PageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+`;
+
 const Title = styled.p`
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  align-self: center;
+  color: black;
+`;
+
+const BottomTextAdvertice = styled.p`
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
   font-weight: bold;
   text-transform: uppercase;
   align-self: center;
@@ -82,24 +104,28 @@ const Login = () => {
   };
 
   return (
-    <LoginContainer
-      onSubmit={(e) => {
-        e.preventDefault();
-        handleSignIn();
-      }}
-    >
-      <TitleContainer>
-        <Title>Login</Title>
-        <Line />
-      </TitleContainer>
-      <InputLabel>Email</InputLabel>
-      <Input {...register("email")} />
-      <InputLabel>Contraseña</InputLabel>
-      <Input {...register("password")} />
-      <Button variant="contained" type="submit">
-        Login
-      </Button>
-    </LoginContainer>
+    <PageContainer>
+      <LoginContainer
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleSignIn();
+        }}
+      >
+        <TitleContainer>
+          <Title>Login</Title>
+          <Line />
+        </TitleContainer>
+        <LoginImage src="/images/logoimagen2.png"></LoginImage>
+        <InputLabel>Email</InputLabel>
+        <Input {...register("email")} />
+        <InputLabel>Contraseña</InputLabel>
+        <Input {...register("password")} />
+        <Button variant="contained" type="submit">
+          Login
+        </Button>
+        <BottomTextAdvertice>Uso solo para administradores</BottomTextAdvertice>
+      </LoginContainer>
+    </PageContainer>
   );
 };
 export default Login;

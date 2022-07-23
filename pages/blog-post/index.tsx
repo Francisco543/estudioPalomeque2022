@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@apollo/client";
 import { NEW_POST, PUBLISH_POST } from "../../gql/mutations/post";
+import BlogCards from "../../components/common/BlogCards";
 const BlogPostContainer = styled.form`
   width: 100%;
   height: 100%;
@@ -80,10 +81,9 @@ const BlogPost = () => {
     measurementId: "G-DQRLZETLTP",
   };
   const router = useRouter();
-
+  initializeApp(firebaseConfig);
+  const auth = getAuth();
   useEffect(() => {
-    initializeApp(firebaseConfig);
-    const auth = getAuth();
     if (!auth.currentUser) {
       router.push({
         pathname: `/`,
@@ -150,29 +150,32 @@ const BlogPost = () => {
           </Alert>
         </AlertContainer>
       )}
-      {user != {} && (
-        <BlogPostContainer
-          onSubmit={(e) => {
-            e.preventDefault();
-            handlePostNewBlog;
-          }}
-        >
-          <TitleContainer>
-            <Title>Blog Post</Title>
-            <Line />
-          </TitleContainer>
-          <Button onClick={handleLogOut}>LogOut</Button>
-          <NewBlogContainer>
-            <InputLabel>Titulo del Blog</InputLabel>
-            <Input {...register("title")} />
+      {auth?.currentUser && (
+        <>
+          <BlogPostContainer
+            onSubmit={(e) => {
+              e.preventDefault();
+              handlePostNewBlog;
+            }}
+          >
+            <TitleContainer>
+              <Title>Blog Post</Title>
+              <Line />
+            </TitleContainer>
+            <Button onClick={handleLogOut}>LogOut</Button>
+            <NewBlogContainer>
+              <InputLabel>Titulo del Blog</InputLabel>
+              <Input {...register("title")} />
 
-            <InputLabel>Contenido del blog</InputLabel>
-            <TextareaAutosize {...register("content")}></TextareaAutosize>
-            <Button onClick={handlePostNewBlog} type="submit">
-              Crear nuevo Blog
-            </Button>
-          </NewBlogContainer>
-        </BlogPostContainer>
+              <InputLabel>Contenido del blog</InputLabel>
+              <TextareaAutosize {...register("content")}></TextareaAutosize>
+              <Button onClick={handlePostNewBlog} type="submit">
+                Crear nuevo Blog
+              </Button>
+            </NewBlogContainer>
+          </BlogPostContainer>
+          <BlogCards></BlogCards>
+        </>
       )}
     </>
   );

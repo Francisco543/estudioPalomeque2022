@@ -77,6 +77,23 @@ class MyDocument extends Document {
           ></meta>
           <link rel="icon" href="/images/logo.png" />
           <meta name="robots" content="index, follow" />
+
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-198115111-1"
+          />
+
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'UA-198115111-1');
+              `,
+            }}
+          />
         </Head>
         <body>
           <Main />

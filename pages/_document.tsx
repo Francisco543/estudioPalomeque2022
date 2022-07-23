@@ -55,6 +55,9 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://unpkg.com/aos@next/dist/aos.css"
           />
+          <title>{`Estudio Juridico Palomeque`}</title>
+          <meta name="description" content="Estudio juridico Palomeque" />
+          <link rel="icon" href="/images/logo.png" />
         </Head>
         <body>
           <Main />

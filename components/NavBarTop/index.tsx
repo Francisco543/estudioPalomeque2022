@@ -117,7 +117,6 @@ const MenuModalContainer = styled.div`
 const NavBarTop = () => {
   const [colorChange, setColorchange] = useState(false);
   const changeNavbarColor = () => {
-    console.log(window.scrollY);
     if (window.scrollY >= 35) {
       setColorchange(true);
     } else {
@@ -165,6 +164,7 @@ const NavBarTop = () => {
           <MenuItem className={colorChange ? "fontColor" : ""}>
             Areas de Practica
           </MenuItem>
+          <MenuItem className={colorChange ? "fontColor" : ""}>Blog</MenuItem>
           <MenuItem className={colorChange ? "fontColor" : ""}>
             Contacto
           </MenuItem>

@@ -1,5 +1,10 @@
 import styled from "@emotion/styled";
+import gql from "graphql-tag";
+import { useEffect, useState } from "react";
+import { ApolloProvider } from "react-apollo";
+import client from "../../apolloClient";
 import AboutMe from "../AboutMe";
+import Blog from "../Blog";
 
 import Background from "../common/Background";
 import CarouselComp from "../common/Carousel";
@@ -17,6 +22,7 @@ const Container = styled.div`
   flex-wrap: wrap;
   margin-top: 0;
 `;
+
 const HomePage = () => {
   return (
     <Container>
@@ -25,6 +31,7 @@ const HomePage = () => {
       <CarouselComp />
       <AboutMe />
       <Practices />
+      <Blog />
       <Contacto />
       <Footer />
     </Container>

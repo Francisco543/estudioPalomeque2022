@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 import {
+  Alert,
+  Box,
   Button,
   Input,
   InputLabel,
@@ -7,8 +9,9 @@ import {
   TextareaAutosize,
   TextField,
 } from "@mui/material";
-import { maxWidth } from "@mui/system";
-import { useState } from "react";
+import emailjs from "emailjs-com";
+import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
 
 const ContactoContainerWrapper = styled.div`
   height: 550px;
@@ -61,6 +64,12 @@ const StyledLabel = styled(InputLabel)`
   margin-top: 15px;
 `;
 
+const MessageTextArea = styled(TextareaAutosize)`
+  :focus {
+    outline: none;
+  }
+`;
+
 const ButtonText = styled.p`
   font-family: "Lora", serif;
   font-size: 13px;
@@ -84,32 +93,100 @@ const ImageContacto = styled.img`
   height: 100%;
 `;
 
+const AlertContainer = styled(Box)`
+  position: fixed;
+  z-index: 2000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: 70px;
+`;
+
 const Contacto = () => {
+  const [alert, setAlert] = useState({ message: "", severity: 0 });
+
+  const enviarEmail = (e: any) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_v2jk8od",
+        "template_eynqj9s",
+        e.target,
+        "user_nT40zrToC43ymio91MwmK"
+      )
+      .then(
+        function (response) {
+          console.log(response);
+          setAlert({ message: "Mensaje enviado", severity: 1 });
+          setValue("name", "");
+          setValue("mail", "");
+          setValue("message", "");
+        },
+        function (error) {
+          console.log(error);
+          setAlert({
+            message: "Error al enviar el mensaje, intente nuevamente",
+            severity: 2,
+          });
+        }
+      );
+  };
+
+  const {
+    register,
+    formState: { errors },
+    setValue,
+  } = useForm();
+
+  useEffect(() => {
+    let closeAlert: any;
+    if (alert)
+      closeAlert = setTimeout(() => {
+        setAlert({ message: "", severity: 0 });
+      }, 5000);
+    return () => clearTimeout(closeAlert);
+  }, [alert]);
+
   return (
-    <ContactoContainerWrapper>
-      <ContactoContainer>
-        <ImageContainer>
-          <ImageContacto src={"/images/slidebar1.jpg"}></ImageContacto>
-        </ImageContainer>
-        <FormContainer>
-          <StyledLabel>Nombre:</StyledLabel>
-          <Input></Input>
-          <StyledLabel>Apellido:</StyledLabel>
-          <Input></Input>
-          <StyledLabel>Escribinos tu consulta:</StyledLabel>
-          <TextareaAutosize
-            style={{
-              background: "transparent",
-              maxWidth: "600px",
-              maxHeight: "100px",
-            }}
-          ></TextareaAutosize>
-          <SendButton>
-            <ButtonText>Enviar</ButtonText>
-          </SendButton>
-        </FormContainer>
-      </ContactoContainer>
-    </ContactoContainerWrapper>
+    <>
+      {alert?.message && (
+        <AlertContainer>
+          <Alert severity={alert.severity == 1 ? "success" : "error"}>
+            {alert.message}
+          </Alert>
+        </AlertContainer>
+      )}
+      <form onSubmit={enviarEmail}>
+        <ContactoContainerWrapper>
+          <ContactoContainer>
+            <ImageContainer>
+              <ImageContacto src={"/images/slidebar1.jpg"}></ImageContacto>
+            </ImageContainer>
+            <FormContainer>
+              <StyledLabel>Nombre y Apellido:</StyledLabel>
+              <Input {...register("name")} name={"name"} />
+              <StyledLabel>Mail:</StyledLabel>
+              <Input {...register("mail")} name={"mail"} />
+              <StyledLabel>Escribinos tu consulta:</StyledLabel>
+              <MessageTextArea
+                {...register("message")}
+                name={"message"}
+                style={{
+                  background: "transparent",
+                  maxWidth: "600px",
+                  maxHeight: "100px",
+                  borderColor: "transparent",
+                  borderBottomColor: "#423d3d",
+                }}
+              ></MessageTextArea>
+              <SendButton type="submit">
+                <ButtonText>Enviar</ButtonText>
+              </SendButton>
+            </FormContainer>
+          </ContactoContainer>
+        </ContactoContainerWrapper>
+      </form>
+    </>
   );
 };
 

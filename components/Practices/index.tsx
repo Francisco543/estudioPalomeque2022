@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
-import { ReactElement } from "react";
+import { ReactElement, useEffect } from "react";
+import AOS from "aos";
 
 const Container = styled.div`
   display: flex;
@@ -91,14 +92,17 @@ const StyledIcon = styled.img`
 `;
 
 const Practices = (): ReactElement => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <Container>
       <TitleContainer>
         <Title>Areas de Practica</Title>
-        <Line />
+        <Line data-aos="fade-right" />
       </TitleContainer>
       <PracticasContainer>
-        <PracticasCard>
+        <PracticasCard data-aos="fade-up">
           <TituloPractica>Diseño de Procesos</TituloPractica>
           <StyledIcon src="/images/proceso-de-diseno.png"></StyledIcon>
           <TextoPractica>
@@ -108,7 +112,7 @@ const Practices = (): ReactElement => {
           </TextoPractica>
           <LineEnd />
         </PracticasCard>
-        <PracticasCard>
+        <PracticasCard data-aos="fade-up">
           <TituloPractica>REI</TituloPractica>
           <StyledIcon src="/images/capacitacion.png"></StyledIcon>
           <TextoPractica>
@@ -119,7 +123,7 @@ const Practices = (): ReactElement => {
           </TextoPractica>
           <LineBlueEnd />
         </PracticasCard>
-        <PracticasCard>
+        <PracticasCard data-aos="fade-up">
           <TituloPractica>Capacitacion</TituloPractica>
           <StyledIcon src="/images/capacitacion.png"></StyledIcon>
           <TextoPractica>
@@ -128,7 +132,7 @@ const Practices = (): ReactElement => {
           </TextoPractica>
           <LineEnd />
         </PracticasCard>
-        <PracticasCard>
+        <PracticasCard data-aos="fade-up">
           <TituloPractica>Auditoria</TituloPractica>
           <StyledIcon src="/images/auditoria2.png"></StyledIcon>
           <TextoPractica>
@@ -138,7 +142,7 @@ const Practices = (): ReactElement => {
           </TextoPractica>
           <LineBlueEnd />
         </PracticasCard>
-        <PracticasCard>
+        <PracticasCard data-aos="fade-up">
           <TituloPractica>Comite</TituloPractica>
           <StyledIcon src="/images/entrevista.png"></StyledIcon>
           <TextoPractica>
@@ -147,7 +151,7 @@ const Practices = (): ReactElement => {
           </TextoPractica>
           <LineEnd />
         </PracticasCard>
-        <PracticasCard>
+        <PracticasCard data-aos="fade-up">
           <TituloPractica>Requerimientos</TituloPractica>
           <StyledIcon src="/images/archivo.png"></StyledIcon>
           <TextoPractica>

@@ -111,6 +111,7 @@ const AboutMe = () => {
         <Avatar
           style={{ width: 200, height: 200 }}
           src={"/images/eugenia.jpg"}
+          alt={"Eugenia Palomeque"}
         ></Avatar>
         <ImageFooter>Eugenia Palomeque</ImageFooter>
       </ImageDiv>

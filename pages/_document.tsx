@@ -55,7 +55,12 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://unpkg.com/aos@next/dist/aos.css"
           />
+          <link rel="canonical" href="https://estudiojuridicopalomeque.com/" />
           <title>{`Estudio Juridico Palomeque`}</title>
+          <meta
+            name="description"
+            content="Estudio juridico Palomeque, Eugenia Palomeque, abogada especializada en Compliance. Revisor Externo Independiente, Auditoria, Diseño de procesos, Comite. "
+          />
           <meta name="description" content="Estudio juridico Palomeque" />
           <link rel="icon" href="/images/logo.png" />
         </Head>

@@ -47,6 +47,10 @@ const BlogArticleContainer = styled(Box)`
   width: 100%;
   height: "fit-content";
   background-color: white;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 `;
 
 const BlogTextContainer = styled(Box)`
@@ -54,6 +58,9 @@ const BlogTextContainer = styled(Box)`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  @media (max-width: 1000px) {
+    max-width: 70%;
+  }
 `;
 
 const BlogTitle = styled.h4`
@@ -81,6 +88,12 @@ const AllBlogsContainer = styled(Box)`
   margin-top: 50px;
 `;
 
+const StyledAvatar = styled(Avatar)`
+  @media (max-width: 1000px) {
+    margin: 20px;
+  }
+`;
+
 const Blog = () => {
   const { loading, error, data } = useQuery(GET_POSTS);
 
@@ -101,10 +114,10 @@ const Blog = () => {
               key={index}
               data-aos={index % 2 == 0 ? "fade-right" : "fade-left"}
             >
-              <Avatar
+              <StyledAvatar
                 src={"images/eugenia.jpg"}
                 sx={{ width: "100px", height: "100px" }}
-              ></Avatar>
+              ></StyledAvatar>
               <BlogTextContainer>
                 <BlogTitle>{blog?.title}</BlogTitle>
                 <BlogText>{blog?.content?.text}</BlogText>

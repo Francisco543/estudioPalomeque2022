@@ -72,7 +72,7 @@ const MenuItem = styled(Link)`
   }
 `;
 
-const MenuItemMobile = styled.p`
+const MenuItemMobile = styled(Link)`
   font-size: 30px;
   color: #1d1b1b;
   text-transform: uppercase;
@@ -143,11 +143,58 @@ const NavBarTop = () => {
     <>
       <Modal open={openMenuModal} onClose={handelCloseMenuModal}>
         <MenuModalContainer>
-          <MenuItemMobile className={"fontColor"}>Estudio</MenuItemMobile>
-          <MenuItemMobile className={"fontColor"}>
+          <MenuItemMobile
+            to={"estudio"}
+            smooth={true}
+            offset={-200}
+            duration={700}
+            delay={200}
+            className={"fontColor"}
+            onClick={() => {
+              setOpenMenuModal(false);
+            }}
+          >
+            Estudio
+          </MenuItemMobile>
+          <MenuItemMobile
+            to={"areas"}
+            smooth={true}
+            offset={-200}
+            duration={700}
+            delay={200}
+            className={"fontColor"}
+            onClick={() => {
+              setOpenMenuModal(false);
+            }}
+          >
             Areas de Practica
           </MenuItemMobile>
-          <MenuItemMobile className={"fontColor"}>Contacto</MenuItemMobile>
+          <MenuItemMobile
+            to={"blog"}
+            smooth={true}
+            offset={-200}
+            duration={700}
+            delay={200}
+            className={"fontColor"}
+            onClick={() => {
+              setOpenMenuModal(false);
+            }}
+          >
+            Blog
+          </MenuItemMobile>
+          <MenuItemMobile
+            to={"contacto"}
+            smooth={true}
+            offset={-200}
+            duration={700}
+            delay={200}
+            className={"fontColor"}
+            onClick={() => {
+              setOpenMenuModal(false);
+            }}
+          >
+            Contacto
+          </MenuItemMobile>
         </MenuModalContainer>
       </Modal>
 

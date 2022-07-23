@@ -58,6 +58,7 @@ const ImageContainer = styled.div`
 const StyledLabel = styled(InputLabel)`
   font-family: "Lora", serif;
   font-size: 16px;
+  text-transform: uppercase;
   line-height: 1.875;
   letter-spacing: 1.5px;
   color: black;

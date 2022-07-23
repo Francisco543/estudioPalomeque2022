@@ -22,7 +22,7 @@ const ContactoContainerWrapper = styled.div`
   align-items: center;
   background-color: #e4e1dedd;
   @media (max-width: 1000px) {
-    height: 900px;
+    height: 1000px;
   }
 `;
 
@@ -49,6 +49,9 @@ const FormContainer = styled.div`
   }
 `;
 const ImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   @media (max-width: 1000px) {
     width: 100%;
@@ -91,8 +94,8 @@ const SendButton = styled(Button)`
 `;
 
 const ImageContacto = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
 `;
 
 const AlertContainer = styled(Box)`

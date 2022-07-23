@@ -62,7 +62,21 @@ class MyDocument extends Document {
             content="Estudio juridico Palomeque, Eugenia Palomeque, abogada especializada en Compliance. Revisor Externo Independiente, Auditoria, Diseño de procesos, Comite. "
           />
           <meta name="description" content="Estudio juridico Palomeque" />
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, user-scalable=yes, viewport-fit=cover"
+          />
+          <meta
+            name="google-site-verification"
+            content="y8KQAQmEDZVbhW1eJHqxwxu1gGZOLH5ufdhevFN8FpM"
+          />
+          <meta
+            name="keywords"
+            content="Derecho, Abogados, Eugenia Palomeque, Estudio Juridico, Compliance, Law Firm, Palomeque, Abogado"
+          ></meta>
           <link rel="icon" href="/images/logo.png" />
+          <meta name="robots" content="index, follow" />
         </Head>
         <body>
           <Main />

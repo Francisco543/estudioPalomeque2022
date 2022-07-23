@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Box } from "@mui/material";
+import { Box, Modal } from "@mui/material";
 import { useEffect, useState } from "react";
 import { RiMenuFill } from "react-icons/ri";
 const Container = styled.div`
@@ -71,10 +71,47 @@ const MenuItem = styled.p`
   }
 `;
 
+const MenuItemMobile = styled.p`
+  font-size: 30px;
+  color: #1d1b1b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Lora", serif;
+
+  cursor: pointer;
+
+  &:after {
+    display: block;
+    content: "";
+    border-bottom: 2px solid #8b740d;
+    transform: scaleX(0);
+    transition: transform 0.35s ease-in-out;
+    transform-origin: 100% 50%;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: 0 50%;
+  }
+`;
+
 const Logo = styled.img`
   width: 100px;
   height: 80px;
   filter: invert(20%);
+`;
+
+const MenuModalContainer = styled.div`
+  width: 50%;
+  height: 100%;
+  background-color: #dab349c0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  :focus {
+    outline: none;
+  }
 `;
 
 const NavBarTop = () => {
@@ -88,29 +125,59 @@ const NavBarTop = () => {
     }
   };
 
+  const [openMenuModal, setOpenMenuModal] = useState(false);
+
+  const handelCloseMenuModal = () => {
+    setOpenMenuModal(false);
+  };
+
+  const handleOpenMenuModal = () => {
+    setOpenMenuModal(true);
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", changeNavbarColor);
   }, []);
 
   return (
-    <Container className={colorChange ? "navColor" : ""}>
-      <ImageContainer>
-        <Logo src={"/images/logo.png"}></Logo>
-        <Title className={colorChange ? "titleColor" : ""}>
-          Estudio Juridico
-        </Title>
-      </ImageContainer>
-      <Menu>
-        <MenuItem className={colorChange ? "fontColor" : ""}>Estudio</MenuItem>
-        <MenuItem className={colorChange ? "fontColor" : ""}>
-          Areas de Practica
-        </MenuItem>
-        <MenuItem className={colorChange ? "fontColor" : ""}>Contacto</MenuItem>
-      </Menu>
-      <MenuMobile>
-        <RiMenuFill size={30} />
-      </MenuMobile>
-    </Container>
+    <>
+      <Modal open={openMenuModal} onClose={handelCloseMenuModal}>
+        <MenuModalContainer>
+          <MenuItemMobile className={colorChange ? "fontColor" : ""}>
+            Estudio
+          </MenuItemMobile>
+          <MenuItemMobile className={colorChange ? "fontColor" : ""}>
+            Areas de Practica
+          </MenuItemMobile>
+          <MenuItemMobile className={colorChange ? "fontColor" : ""}>
+            Contacto
+          </MenuItemMobile>
+        </MenuModalContainer>
+      </Modal>
+
+      <Container className={colorChange ? "navColor" : ""}>
+        <ImageContainer>
+          <Logo src={"/images/logo.png"}></Logo>
+          <Title className={colorChange ? "titleColor" : ""}>
+            Estudio Juridico
+          </Title>
+        </ImageContainer>
+        <Menu>
+          <MenuItem className={colorChange ? "fontColor" : ""}>
+            Estudio
+          </MenuItem>
+          <MenuItem className={colorChange ? "fontColor" : ""}>
+            Areas de Practica
+          </MenuItem>
+          <MenuItem className={colorChange ? "fontColor" : ""}>
+            Contacto
+          </MenuItem>
+        </Menu>
+        <MenuMobile>
+          <RiMenuFill size={30} onClick={handleOpenMenuModal} />
+        </MenuMobile>
+      </Container>
+    </>
   );
 };
 

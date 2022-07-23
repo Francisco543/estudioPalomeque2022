@@ -3,10 +3,12 @@ import {
   Button,
   Input,
   InputLabel,
+  Modal,
   TextareaAutosize,
   TextField,
 } from "@mui/material";
 import { maxWidth } from "@mui/system";
+import { useState } from "react";
 
 const ContactoContainerWrapper = styled.div`
   height: 550px;
@@ -78,6 +80,11 @@ const SendButton = styled(Button)`
 `;
 
 const ImageContacto = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+
+const MenuModalContainer = styled.div`
   width: 100%;
   height: 100%;
 `;

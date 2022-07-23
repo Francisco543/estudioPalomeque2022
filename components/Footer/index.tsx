@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { Divider } from "@mui/material";
 
 const FooterContainer = styled.div`
   display: flex;

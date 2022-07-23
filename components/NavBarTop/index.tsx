@@ -31,6 +31,7 @@ const Title = styled.p`
   color: black;
   font-family: "Lora", serif;
   margin-left: 20px;
+  transition: all 2s ease-out;
 `;
 const Menu = styled.div`
   display: flex;

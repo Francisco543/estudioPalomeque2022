@@ -25,7 +25,7 @@ const CarouselComp = () => {
       height={"500px"}
       indicators={false}
       autoPlay={true}
-      stopAutoPlayOnHover={false}
+      stopAutoPlayOnHover={true}
     >
       <ImageContainerWithGradient url="/images/slidebar1.jpg"></ImageContainerWithGradient>
       <ImageContainerWithGradient url="/images/carousel5.png"></ImageContainerWithGradient>

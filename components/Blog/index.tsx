@@ -2,8 +2,10 @@ import { useQuery } from "@apollo/client";
 import styled from "@emotion/styled";
 import { Avatar, Box } from "@mui/material";
 import AOS from "aos";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { GET_POSTS } from "../../gql/querys/posts";
+import BlogModal from "../common/BlogModal";
+import { truncateString } from "../utils";
 
 const BlogContainer = styled(Box)`
   display: flex;
@@ -98,6 +100,16 @@ const AllBlogsContainer = styled(Box)`
   margin-top: 50px;
 `;
 
+const ReadMore = styled.p`
+  align-self: flex-end;
+  font-family: "Lora", serif;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1.875;
+  letter-spacing: 1.5px;
+  color: #b38825;
+`;
+
 const StyledAvatar = styled(Avatar)`
   @media (max-width: 1000px) {
     margin: 20px;
@@ -107,37 +119,60 @@ const StyledAvatar = styled(Avatar)`
 const Blog = () => {
   const { loading, error, data } = useQuery(GET_POSTS);
 
+  const [blog, setBlog] = useState({});
+  const [openBlogModal, setOpenBlogModal] = useState(false);
+
   useEffect(() => {
     AOS.init();
   }, []);
 
+  const setCloseBlogModal = () => {
+    setOpenBlogModal(false);
+  };
+
+  const handleOpenReadMore = (blog: any) => {
+    setBlog(blog);
+    setOpenBlogModal(true);
+  };
+
   return (
-    <BlogContainer id={"blog"}>
-      <TitleContainer>
-        <Title>Blog</Title>
-        <Line data-aos="fade-right" />
-      </TitleContainer>
-      <AllBlogsContainer>
-        {data?.posts?.map((blog: any, index: number) => {
-          return (
-            <BlogArticleContainer
-              key={index}
-              data-aos={index % 2 == 0 ? "fade-right" : "fade-left"}
-            >
-              <StyledAvatar
-                src={"images/eugenia.jpg"}
-                sx={{ width: "100px", height: "100px" }}
-              ></StyledAvatar>
-              <BlogTextContainer>
-                <BlogTitle>{blog?.title}</BlogTitle>
-                <BlogText>{blog?.blogContent}</BlogText>
-                <CreatedAt>{blog?.createdAt.slice(0, 10)}</CreatedAt>
-              </BlogTextContainer>
-            </BlogArticleContainer>
-          );
-        })}
-      </AllBlogsContainer>
-    </BlogContainer>
+    <>
+      <BlogModal
+        blog={blog}
+        openModal={openBlogModal}
+        setCloseBlogModal={setCloseBlogModal}
+      ></BlogModal>
+
+      <BlogContainer id={"blog"}>
+        <TitleContainer>
+          <Title>Blog</Title>
+          <Line data-aos="fade-right" />
+        </TitleContainer>
+        <AllBlogsContainer>
+          {data?.posts?.map((blog: any, index: number) => {
+            return (
+              <BlogArticleContainer
+                key={index}
+                data-aos={index % 2 == 0 ? "fade-right" : "fade-left"}
+              >
+                <StyledAvatar
+                  src={"images/eugenia.jpg"}
+                  sx={{ width: "100px", height: "100px" }}
+                ></StyledAvatar>
+                <BlogTextContainer>
+                  <BlogTitle>{blog?.title}</BlogTitle>
+                  <BlogText>{truncateString(blog?.blogContent, 200)}</BlogText>
+                  <ReadMore onClick={() => handleOpenReadMore(blog)}>
+                    Read More
+                  </ReadMore>
+                  <CreatedAt>{blog?.createdAt.slice(0, 10)}</CreatedAt>
+                </BlogTextContainer>
+              </BlogArticleContainer>
+            );
+          })}
+        </AllBlogsContainer>
+      </BlogContainer>
+    </>
   );
 };
 export default Blog;

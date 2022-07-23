@@ -105,7 +105,6 @@ const StyledAvatar = styled(Avatar)`
 
 const Blog = () => {
   const { loading, error, data } = useQuery(GET_POSTS);
-  console.log("🚀 ~ file: index.tsx ~ line 107 ~ Blog ~ data", data);
 
   useEffect(() => {
     AOS.init();

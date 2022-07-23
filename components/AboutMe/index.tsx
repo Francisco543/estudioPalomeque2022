@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import { Avatar } from "@mui/material";
-import AOS from "aos";
-import { useEffect } from "react";
+
 const MainContainer = styled.div`
   display: flex;
   flex-direction: row;

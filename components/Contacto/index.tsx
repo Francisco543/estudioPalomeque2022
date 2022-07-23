@@ -5,9 +5,7 @@ import {
   Button,
   Input,
   InputLabel,
-  Modal,
   TextareaAutosize,
-  TextField,
 } from "@mui/material";
 import emailjs from "emailjs-com";
 import { useEffect, useState } from "react";

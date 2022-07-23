@@ -1,11 +1,6 @@
 import styled from "@emotion/styled";
-import gql from "graphql-tag";
-import { useEffect, useState } from "react";
-import { ApolloProvider } from "react-apollo";
-import client from "../../apolloClient";
 import AboutMe from "../AboutMe";
 import Blog from "../Blog";
-
 import Background from "../common/Background";
 import CarouselComp from "../common/Carousel";
 import Contacto from "../Contacto";

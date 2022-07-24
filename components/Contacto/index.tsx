@@ -29,8 +29,7 @@ const ContactoContainer = styled.div`
   flex-direction: row;
   width: 85%;
   height: 450px;
-  background-color: #ca9737;
-
+  border-bottom: 2px solid orange;
   @media (max-width: 1000px) {
     flex-direction: column;
     height: 800px;
@@ -89,11 +88,14 @@ const SendButton = styled(Button)`
   height: 40px;
   margin-top: 15px;
   align-self: flex-end;
+  :hover {
+    background-color: orange;
+  }
 `;
 
 const ImageContacto = styled.img`
   width: 90%;
-  height: 90%;
+  height: 40%;
 `;
 
 const AlertContainer = styled(Box)`
@@ -190,7 +192,7 @@ const Contacto = () => {
           </TitleContainer>
           <ContactoContainer>
             <ImageContainer>
-              <ImageContacto src={"/images/slidebar1.jpg"}></ImageContacto>
+              <ImageContacto src={"/images/logoimagen2.png"}></ImageContacto>
             </ImageContainer>
             <FormContainer>
               <StyledLabel>Nombre y Apellido:</StyledLabel>

@@ -30,6 +30,7 @@ const Section = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 50%;
 `;
 
 const HLine = styled.div`
@@ -53,7 +54,7 @@ const Footer = () => {
   return (
     <FooterContainer>
       <Section>
-        <FooterItem>Eugenia Palomeque Abogados</FooterItem>
+        <FooterItem>María Eugenia Palomeque Abogados</FooterItem>
         <FooterItem>Todos los derechos reservados</FooterItem>
       </Section>
       <HLine />

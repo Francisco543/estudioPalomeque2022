@@ -101,7 +101,7 @@ const Practices = (): ReactElement => {
   return (
     <Container id={"areas"}>
       <TitleContainer>
-        <Title>Areas de Practica</Title>
+        <Title>Areas de Práctica</Title>
         <Line data-aos="fade-right" />
       </TitleContainer>
       <PracticasContainer>

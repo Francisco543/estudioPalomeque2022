@@ -195,9 +195,9 @@ const Contacto = () => {
             <FormContainer>
               <StyledLabel>Nombre y Apellido:</StyledLabel>
               <Input {...register("name")} name={"name"} />
-              <StyledLabel>Mail:</StyledLabel>
+              <StyledLabel>E-Mail:</StyledLabel>
               <Input {...register("mail")} name={"mail"} />
-              <StyledLabel>Escribinos tu consulta:</StyledLabel>
+              <StyledLabel>Mandanos tu consulta:</StyledLabel>
               <MessageTextArea
                 {...register("message")}
                 name={"message"}

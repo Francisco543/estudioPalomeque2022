@@ -66,6 +66,9 @@ const PracticasCard = styled.div`
   background-color: #fff;
   width: 400px;
   height: 450px;
+  :hover {
+    box-shadow: 2px 2px 2px 1px rgba(187, 106, 0, 0.267);
+  }
 `;
 
 const TituloPractica = styled.p`

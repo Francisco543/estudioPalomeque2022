@@ -94,8 +94,8 @@ const SendButton = styled(Button)`
 `;
 
 const ImageContacto = styled.img`
-  width: 90%;
-  height: 40%;
+  width: 70%;
+  height: 30%;
 `;
 
 const AlertContainer = styled(Box)`

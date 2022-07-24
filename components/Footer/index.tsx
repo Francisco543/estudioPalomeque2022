@@ -54,14 +54,14 @@ const Footer = () => {
   return (
     <FooterContainer>
       <Section>
-        <FooterItem>María Eugenia Palomeque Abogados</FooterItem>
+        <FooterItem>María Eugenia Palomeque - Abogados</FooterItem>
         <FooterItem>Todos los derechos reservados</FooterItem>
       </Section>
       <HLine />
       <Section>
         <ItemContainer>
           <RiPhoneFill color="white" />
-          <FooterItem>Teléfono: +54 911 11 3309-7174 </FooterItem>
+          <FooterItem>Teléfono: +54 911 3309-7174 </FooterItem>
         </ItemContainer>
 
         <ItemContainer>

@@ -127,7 +127,7 @@ const Practices = (): ReactElement => {
           <LineBlueEnd />
         </PracticasCard>
         <PracticasCard data-aos="fade-up">
-          <TituloPractica>Capacitacion</TituloPractica>
+          <TituloPractica>Capacitación</TituloPractica>
           <StyledIcon src="/images/capacitacion.png"></StyledIcon>
           <TextoPractica>
             Diseño y Elaboración de Programas de Capacitación para los distintos
@@ -140,7 +140,7 @@ const Practices = (): ReactElement => {
           <StyledIcon src="/images/auditoria2.png"></StyledIcon>
           <TextoPractica>
             Control interno global de identificación, evaluación, mitigación y
-            monitoreo de Riesgos de LA/FT. Revision integral para la
+            monitoreo de Riesgos de LA/FT. Revisión integral para la
             identificación de deficiencias o mejoras a aplicar.
           </TextoPractica>
           <LineBlueEnd />

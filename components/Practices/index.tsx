@@ -118,7 +118,7 @@ const Practices = (): ReactElement => {
           <TextoPractica>
             Revisor Externo Independiente: Unidad de Información Financiera
             (UIF). Emisión y presentación ante la UIF de informes de revisión
-            externa independiente vinculado al cumplimiento normativo de los
+            externa independiente vinculados al cumplimiento normativo de los
             Sujetos Obligados.
           </TextoPractica>
           <LineBlueEnd />
@@ -143,11 +143,11 @@ const Practices = (): ReactElement => {
           <LineBlueEnd />
         </PracticasCard>
         <PracticasCard data-aos="fade-up">
-          <TituloPractica>Comite</TituloPractica>
+          <TituloPractica>Comité</TituloPractica>
           <StyledIcon src="/images/entrevista.png"></StyledIcon>
           <TextoPractica>
-            Participación en Comité de Compliance o PLA&FT Redacción de Minutas.
-            Seguimiento de temas tratados.
+            Participación en Comité de Compliance o PLA&FT. Redacción de
+            Minutas. Seguimiento de temas tratados.
           </TextoPractica>
           <LineEnd />
         </PracticasCard>

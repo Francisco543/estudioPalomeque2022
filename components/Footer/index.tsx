@@ -60,7 +60,7 @@ const Footer = () => {
       <Section>
         <ItemContainer>
           <RiPhoneFill color="white" />
-          <FooterItem>Telefono: 11 3309-7174 </FooterItem>
+          <FooterItem>Telefono: +54 911 11 3309-7174 </FooterItem>
         </ItemContainer>
 
         <ItemContainer>

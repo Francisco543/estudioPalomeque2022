@@ -43,7 +43,6 @@ const ImageDiv = styled.div`
 const ImageFooter = styled.p`
   color: #070606da;
   font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
   font-size: 20px;
   line-height: 1.875;
   letter-spacing: 1.5px;
@@ -113,7 +112,7 @@ const AboutMe = () => {
           src={"/images/eugenia.jpg"}
           alt={"Eugenia Palomeque"}
         ></Avatar>
-        <ImageFooter>Eugenia Palomeque</ImageFooter>
+        <ImageFooter>Dra. MARIA EUGENIA PALOMEQUE</ImageFooter>
       </ImageDiv>
       <DescripcionContainer>
         <NavItemSection>

@@ -69,7 +69,7 @@ const Footer = () => {
         </ItemContainer>
         <ItemContainer>
           <RiMailFill color="white" />
-          <FooterItem>E-Mail: eugeniapalomeque@yahoo.com.ar </FooterItem>
+          <FooterItem>E-Mail: estudiojuridicopalomeque@gmail.com </FooterItem>
         </ItemContainer>
       </Section>
     </FooterContainer>

@@ -118,8 +118,8 @@ const Practices = (): ReactElement => {
           <TextoPractica>
             Revisor Externo Independiente: Unidad de Información Financiera
             (UIF). Emisión y presentación ante la UIF de informes de revisión
-            externa independiente vinculado al cumplimiento de los Sujetos
-            Obligados.
+            externa independiente vinculado al cumplimiento normativo de los
+            Sujetos Obligados.
           </TextoPractica>
           <LineBlueEnd />
         </PracticasCard>
@@ -136,8 +136,8 @@ const Practices = (): ReactElement => {
           <TituloPractica>Auditoria</TituloPractica>
           <StyledIcon src="/images/auditoria2.png"></StyledIcon>
           <TextoPractica>
-            Control interno global de identificación, evaluación, migración y
-            monitoreo de Riesgos de LA/FT. Revisiones integrales para la
+            Control interno global de identificación, evaluación, mitigación y
+            monitoreo de Riesgos de LA/FT. Revision integral para la
             identificación de deficiencias o mejoras a aplicar.
           </TextoPractica>
           <LineBlueEnd />

@@ -127,13 +127,13 @@ const Practices = (): ReactElement => {
           <TituloPractica>Capacitacion</TituloPractica>
           <StyledIcon src="/images/capacitacion.png"></StyledIcon>
           <TextoPractica>
-            Diseño y Elaboracion de Programas de Capacitación para los distintos
+            Diseño y Elaboración de Programas de Capacitación para los distintos
             niveles de recursos humanos.
           </TextoPractica>
           <LineEnd />
         </PracticasCard>
         <PracticasCard data-aos="fade-up">
-          <TituloPractica>Auditoria</TituloPractica>
+          <TituloPractica>Auditoría</TituloPractica>
           <StyledIcon src="/images/auditoria2.png"></StyledIcon>
           <TextoPractica>
             Control interno global de identificación, evaluación, mitigación y

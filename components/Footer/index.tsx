@@ -60,16 +60,16 @@ const Footer = () => {
       <Section>
         <ItemContainer>
           <RiPhoneFill color="white" />
-          <FooterItem>Telefono: +54 911 11 3309-7174 </FooterItem>
+          <FooterItem>Teléfono: +54 911 11 3309-7174 </FooterItem>
         </ItemContainer>
 
         <ItemContainer>
           <RiMapPinFill color="white" />
-          <FooterItem>Direccion: Buenos Aires, Capital Federal</FooterItem>
+          <FooterItem>Dirección: Buenos Aires, Argentina</FooterItem>
         </ItemContainer>
         <ItemContainer>
           <RiMailFill color="white" />
-          <FooterItem>Mail: eugeniapalomeque@yahoo.com.ar </FooterItem>
+          <FooterItem>E-Mail: eugeniapalomeque@yahoo.com.ar </FooterItem>
         </ItemContainer>
       </Section>
     </FooterContainer>

@@ -108,7 +108,7 @@ const Practices = (): ReactElement => {
           <TextoPractica>
             Elaboración y Adecuación de Políticas y Procedimientos para su
             Implementación y Cumplimiento Normativo. Manuales. Códigos.
-            Lineamientos
+            Lineamientos.
           </TextoPractica>
           <LineEnd />
         </PracticasCard>
@@ -118,8 +118,8 @@ const Practices = (): ReactElement => {
           <TextoPractica>
             Revisor Externo Independiente: Unidad de Información Financiera
             (UIF). Emisión y presentación ante la UIF de informes de revisión
-            externa independiente vinculadas al cumplimiento, por su parte de
-            los Sujetos Obligados
+            externa independiente vinculado al cumplimiento de los Sujetos
+            Obligados.
           </TextoPractica>
           <LineBlueEnd />
         </PracticasCard>
@@ -128,7 +128,7 @@ const Practices = (): ReactElement => {
           <StyledIcon src="/images/capacitacion.png"></StyledIcon>
           <TextoPractica>
             Diseño y Elaboracion de Programas de Capacitación para los distintos
-            niveles de recursos humanos
+            niveles de recursos humanos.
           </TextoPractica>
           <LineEnd />
         </PracticasCard>
@@ -138,7 +138,7 @@ const Practices = (): ReactElement => {
           <TextoPractica>
             Control interno global de identificación, evaluación, migración y
             monitoreo de Riesgos de LA/FT. Revisiones integrales para la
-            identificación de deficiencias o mejoras a aplicar
+            identificación de deficiencias o mejoras a aplicar.
           </TextoPractica>
           <LineBlueEnd />
         </PracticasCard>
@@ -156,7 +156,7 @@ const Practices = (): ReactElement => {
           <StyledIcon src="/images/archivo.png"></StyledIcon>
           <TextoPractica>
             Asistencia en Requerimientos o Procesos de Supervisión de Organismos
-            de Control/Reguladores
+            de Control/Reguladores.
           </TextoPractica>
           <LineBlueEnd />
         </PracticasCard>

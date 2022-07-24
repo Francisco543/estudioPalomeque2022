@@ -237,7 +237,7 @@ const NavBarTop = () => {
             delay={200}
             className={colorChange ? "fontColor" : ""}
           >
-            Blog
+            Noticias
           </MenuItem>
           <MenuItem
             to={"contacto"}

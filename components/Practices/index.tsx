@@ -117,7 +117,7 @@ const Practices = (): ReactElement => {
         </PracticasCard>
         <PracticasCard data-aos="fade-up">
           <TituloPractica>REI</TituloPractica>
-          <StyledIcon src="/images/capacitacion.png"></StyledIcon>
+          <StyledIcon src="/images/lupa.png"></StyledIcon>
           <TextoPractica>
             Revisor Externo Independiente: Unidad de Información Financiera
             (UIF). Emisión y presentación ante la UIF de informes de revisión

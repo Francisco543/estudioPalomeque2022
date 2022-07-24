@@ -95,7 +95,7 @@ const SendButton = styled(Button)`
 
 const ImageContacto = styled.img`
   width: 70%;
-  height: 30%;
+  height: 20%;
   margin-bottom: 100px;
 `;
 

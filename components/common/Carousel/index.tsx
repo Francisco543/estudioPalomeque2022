@@ -15,6 +15,7 @@ const ImageContainerWithGradient = styled.div<ImageContainerProps>`
   width: 100%;
   height: 100%;
   background-size: cover;
+  bottom: 0;
   background-image: linear-gradient(to bottom, #cca36e, #681c1c16),
     url(${(props) => props.url});
 `;
@@ -22,15 +23,14 @@ const ImageContainerWithGradient = styled.div<ImageContainerProps>`
 const CarouselComp = () => {
   return (
     <Carousel
-      height={"500px"}
+      height={"560px"}
       indicators={false}
       autoPlay={true}
       stopAutoPlayOnHover={true}
     >
-      <ImageContainerWithGradient url="/images/slidebar1.jpg"></ImageContainerWithGradient>
-      <ImageContainerWithGradient url="/images/carousel5.png"></ImageContainerWithGradient>
+      <ImageContainerWithGradient url="/images/lavado.png"></ImageContainerWithGradient>
       <ImageContainerWithGradient url="/images/tribunales.jpg"></ImageContainerWithGradient>
-      <ImageContainerWithGradient url="/images/paginatia.png"></ImageContainerWithGradient>
+      <ImageContainerWithGradient url="/images/abogados2.jpeg"></ImageContainerWithGradient>
     </Carousel>
   );
 };

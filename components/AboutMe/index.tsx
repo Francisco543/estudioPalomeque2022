@@ -134,10 +134,10 @@ const AboutMe = () => {
               <Descripcion>Compliance</Descripcion>
             </li>
             <li>
-              <Descripcion>Asesoriamento Integral Estratégico</Descripcion>
+              <Descripcion>Asesoramiento Integral Estratégico</Descripcion>
             </li>
             <li>
-              <Descripcion>Sujetos Obligdos UIF</Descripcion>
+              <Descripcion>Sujetos Obligados UIF</Descripcion>
             </li>
             <li>
               <Descripcion>Diseño de Políticas y Procedimientos</Descripcion>

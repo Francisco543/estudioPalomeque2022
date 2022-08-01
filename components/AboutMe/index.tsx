@@ -69,10 +69,11 @@ const DescripcionContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: flex-start;
   width: 50%;
 
   justify-content: center;
-  align-items: center;
+
   @media (max-width: 1441px) {
     width: 100%;
   }
@@ -130,20 +131,30 @@ const AboutMe = () => {
         <NavItemSection>
           <ul>
             <li>
-              <Descripcion>Medidas contra el lavado de dinero</Descripcion>
+              <Descripcion>Compliance</Descripcion>
             </li>
             <li>
-              {" "}
-              <Descripcion>Mercado de capitales</Descripcion>
+              <Descripcion>Asesoriamento Integral Estratégico</Descripcion>
             </li>
             <li>
-              <Descripcion>Planificacion estrategica</Descripcion>
+              <Descripcion>Sujetos Obligdos UIF</Descripcion>
             </li>
             <li>
-              <Descripcion>Finanzas corporativas</Descripcion>
+              <Descripcion>Diseño de Políticas y Procedimientos</Descripcion>
             </li>
             <li>
-              <Descripcion>Riesgo financiero</Descripcion>
+              <Descripcion>Auditoría</Descripcion>
+            </li>
+            <li>
+              <Descripcion>Capacitación en PLA&FT</Descripcion>
+            </li>
+            <li>
+              <Descripcion>
+                Políticas en Protección de Datos Personales
+              </Descripcion>
+            </li>
+            <li>
+              <Descripcion>Gestión de Riesgos</Descripcion>
             </li>
           </ul>
         </NavItemSection>

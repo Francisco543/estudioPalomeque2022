@@ -4,6 +4,7 @@ import { Avatar, Box } from "@mui/material";
 import AOS from "aos";
 import { useEffect, useState } from "react";
 import { GET_POSTS } from "../../gql/querys/posts";
+import { Blog } from "../../types";
 import BlogModal from "../common/BlogModal";
 import { truncateString } from "../utils";
 
@@ -151,7 +152,7 @@ const Blog = () => {
           <Line data-aos="fade-right" />
         </TitleContainer>
         <AllBlogsContainer>
-          {data?.posts?.map((blog: any, index: number) => {
+          {data?.posts?.map((blog: Blog, index: number) => {
             return (
               <BlogArticleContainer
                 key={index}

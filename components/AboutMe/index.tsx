@@ -16,7 +16,7 @@ const MainContainer = styled.div`
     align-items: center;
   }
   @media (max-width: 800px) {
-    height: 900px;
+    height: 1000px;
     justify-content: center;
     flex-direction: column;
     justify-content: center;

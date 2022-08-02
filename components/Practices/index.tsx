@@ -19,6 +19,10 @@ const Title = styled.p`
   text-transform: uppercase;
   align-self: center;
   color: black;
+
+  @media (max-width: 500px) {
+    font-size: 25px;
+  }
 `;
 
 const TitleContainer = styled.div`
@@ -77,6 +81,10 @@ const TituloPractica = styled.p`
   text-transform: uppercase;
   align-self: center;
   color: black;
+
+  @media (max-width: 500px) {
+    font-size: 20px;
+  }
 `;
 
 const TextoPractica = styled.p`

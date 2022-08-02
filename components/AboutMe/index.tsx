@@ -16,7 +16,7 @@ const MainContainer = styled.div`
     align-items: center;
   }
   @media (max-width: 800px) {
-    height: 1000px;
+    height: 1200px;
     justify-content: center;
     flex-direction: column;
     justify-content: center;
@@ -62,6 +62,7 @@ const NavItemSection = styled.div`
 
   @media (max-width: 710px) {
     width: 90%;
+    margin-left: 0px;
   }
 `;
 

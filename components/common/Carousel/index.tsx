@@ -28,9 +28,9 @@ const CarouselComp = () => {
       autoPlay={true}
       stopAutoPlayOnHover={true}
     >
+      <ImageContainerWithGradient url="/images/abogados2.jpeg"></ImageContainerWithGradient>
       <ImageContainerWithGradient url="/images/lavado.png"></ImageContainerWithGradient>
       <ImageContainerWithGradient url="/images/tribunales.jpg"></ImageContainerWithGradient>
-      <ImageContainerWithGradient url="/images/abogados2.jpeg"></ImageContainerWithGradient>
     </Carousel>
   );
 };

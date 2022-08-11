@@ -66,6 +66,10 @@ const NavItemSection = styled.div`
   }
 `;
 
+const FotoTia = styled(Avatar)`
+  filter: grayscale(90%);
+`;
+
 const DescripcionContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -109,11 +113,11 @@ const AboutMe = () => {
   return (
     <MainContainer id="estudio">
       <ImageDiv>
-        <Avatar
+        <FotoTia
           style={{ width: 200, height: 200 }}
           src={"/images/eugenia.jpg"}
           alt={"Eugenia Palomeque"}
-        ></Avatar>
+        ></FotoTia>
         <ImageFooter>Dra. MARIA EUGENIA PALOMEQUE</ImageFooter>
       </ImageDiv>
       <DescripcionContainer>

@@ -52,7 +52,20 @@ const ImageContainer = styled.div`
   width: 50%;
   @media (max-width: 1000px) {
     width: 100%;
-    height: 50%;
+    height: 100px;
+  }
+`;
+
+const ImageContacto = styled.img`
+  width: 70%;
+  height: 20%;
+  margin-bottom: 100px;
+
+  @media (max-width: 500px) {
+    height: 100px;
+    width: 200px;
+    margin-bottom: 50px;
+    margin-top: 50px;
   }
 `;
 
@@ -91,12 +104,6 @@ const SendButton = styled(Button)`
   :hover {
     background-color: orange;
   }
-`;
-
-const ImageContacto = styled.img`
-  width: 70%;
-  height: 20%;
-  margin-bottom: 100px;
 `;
 
 const AlertContainer = styled(Box)`
